@@ -1,0 +1,329 @@
+/* font style */
+@font-face {
+  font-family:RobotoMono ;
+  src: url(./font/RobotoMono.ttf);
+}
+@font-face {
+  font-family:OpenSans ;
+  src: url(./font/OpenSans.ttf);
+}
+
+/* --------------- */
+li :not(.info-card){ list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+*:not(.hero){
+  font-family:OpenSans;
+}
+ion-icon { display: block; }
+   
+/* section header classe hero style */
+.hero {
+   font-family: RobotoMono ;
+    color: #ffffff;
+    background-image: linear-gradient(#060064,#4db6acb6,#ffffffc4),url(./photos/donts.jpeg); 
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    margin-bottom: 30px;
+  }
+
+  .hero-text {
+    flex: 1;
+    padding: 20px;
+    margin: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 120px;
+ 
+  }
+  .hero-text button{
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color:#4db6ac;
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  
+  .hero-text button:active {
+    scale: 0.92;
+  }
+  
+  .hero-text button:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, #060064 10%, rgba(31, 215, 232, 0.873) 60%,#060064);
+    color: rgb(4, 4, 38);
+  }
+
+  .hero-image {
+    flex: 1;
+    text-align: center;
+  
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    background: transparent;
+    
+}
+@media screen and (max-width: 840px) {
+      .hero-image img {
+      display: none;
+      }
+      .hero{
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+      }
+    .hero-text{
+      margin: 0 ;
+    }
+}
+
+/*----------  #SERVICE-------------------------*/
+
+.service img { height: auto; }
+.service-banner { display: none; }
+
+.service { padding-block-end: 0;font-family: OpenSans; }
+
+.service .section-title { margin-block-end: 50px; }
+
+.service-list {
+  display: grid;
+  gap: 15px;
+}
+
+.service-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-4);
+  padding: 30px;
+}
+
+.service-card .card-icon {
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.service-card .card-title { margin-block-end: 8px; }
+
+
+/* responsive for larger than 992px screen */
+
+ @media (min-width: 992px) {
+  
+    .service-list { grid-template-columns: repeat(3, 1fr); }
+  
+    .service-banner {
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+  }
+  /* end .service style */
+
+  /*------------ #ABOUT-----------------------*/
+ 
+.about {  background-image: linear-gradient( #060064,#4db6acb6,#ffffffc4),url(./photos/donts.jpeg); 
+  background-size:900px;
+  padding-block-end: 0;
+
+h1{
+  color: #ffffff;
+}}  
+  @keyframes slide {
+    to {
+      background-position:
+        60px 0,
+        60px 0,
+        90px 30px,
+        90px 30px;
+    }
+  }
+.about-banner {display: none;}
+.about-content {
+  color: #ffffff;
+margin-left:50px ;
+}
+@media (min-width: 768px) {
+   .about .container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;  
+  }
+  .about-banner {display: block;  width: 400px; }
+}
+/*-----------------END STYLE ABOUT------------------*/
+    /* GPS */
+    .location-section {
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background-color: #f9f9f9;
+      padding: 2rem;
+      justify-content: space-between;
+    }
+    
+    .map-container,
+    .info-card {
+      flex: 1 1 300px;
+      min-width: 300px; 
+      margin-top: 30px;
+   
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 550px;
+      border-radius: 20px;
+       box-shadow: 0 0 10px #060064;
+    }
+    
+    .info-card {
+      background:#060064; 
+      box-shadow: 0 0 10px #060064;
+      font-size: 1.2rem;
+      font-family:OpenSans;
+      padding: 1rem;
+      border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+      h3{
+        display: list-item;
+        list-style: disc inside;
+        
+      }
+     div{
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 100px;
+     }
+     button{
+      font-size: 1.2rem;
+      padding: 1rem 2.5rem;
+      margin-bottom: 50px;
+      border: none;
+      outline: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      background-color:#4db6ac;
+      color: rgb(234, 234, 234);
+      font-weight: 700;
+      transition: 0.6s;
+      box-shadow: 0px 0px 60px #1f4c65;
+      -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    }
+    }
+    
+    /* end GPS */
+
+
+  /* footer */
+
+  .footer {
+   
+    background:#060064;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 20px 20px;
+    border-top: 2px solid #e0e0e0;
+    box-shadow: 0 -10px 10px #060064 ;
+  }
+  .footerimg img{
+ margin-top: 100px;
+    width: 100%; 
+    
+
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-section {
+    flex: 1 1 220px;
+    margin: 20px;
+    p{
+      text-align: justify;
+    }
+  }
+
+  .footer-section img{
+    width: 160px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    color: #007baf;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007baf;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #005f85;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-section {
+      text-align: center;
+      margin: 15px 0;
+    }
+  }
+  
+  /*end footer*/

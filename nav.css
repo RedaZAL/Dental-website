@@ -1,0 +1,39 @@
+
+/* navbar style */
+.navbar {
+  transition: all 0.3s ease;
+  background-color: #060064;
+}
+.header{
+   img{
+  width: 50px;
+  } 
+}
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.nav-link {
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+      background-color: #006164; /* لون خلفية القائمة المنسدلة */
+      padding: 1rem;
+      border-radius: 0.25rem;
+      margin-top: 0.5rem;
+  }  
+  .nav-item {
+      margin: 0.5rem 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar-brand {
+      font-size: 1.25rem;
+  }
+}
+/* end  style navbar */
